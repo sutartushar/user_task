@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { MdDeleteForever } from "react-icons/md";
 import { AiFillEdit } from "react-icons/ai";
 import { TiTick } from "react-icons/ti";
-import { FaUserSecret } from "react-icons/fa";
 
 const localItemData = () => {
   const localItem = localStorage.getItem("data");
@@ -77,7 +76,7 @@ function App() {
       <div className="header-title">
         <input
           type="text"
-          placeholder="Add users..."
+          placeholder="Add Task..."
           className="input-field"
           value={inputData}
           onChange={(e) => setInputData(e.target.value)}
@@ -106,10 +105,7 @@ function App() {
             </button>
           </div>
         ) : (
-          <h3 className="add-user">
-            Add Userrs
-            <FaUserSecret />
-          </h3>
+          <h3 className="add-user">Add Task</h3>
         )}
       </div>
     </div>
